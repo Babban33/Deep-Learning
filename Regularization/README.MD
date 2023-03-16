@@ -59,6 +59,7 @@ L2-regularization relies on the assumption that a model with small weights is si
     - Weights are pushed to smaller values.
 </font>
 ---
+
 <a name='6'></a>
 # **Dropout**
 
@@ -72,7 +73,6 @@ To understand drop-out, consider this conversation with a friend:
 - Friend: "I see, but are you sure that your neurons are learning different features and not all the same features?"
 - You: "Good point... Neurons in the same layer actually don't talk to each other. It should be definitly possible that they learn the same image features/shapes/forms/details... which would be redundant. There should be a solution."
 !--> 
-
 
 <center>
 <video width="620" height="440" src="images\dropout1_kiank.mp4" type="video/mp4" controls>
