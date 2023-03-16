@@ -6,7 +6,7 @@ Deep Learning models have so much flexibility and capacity that **overfitting ca
 
 You have just been hired as an AI expert by the French Football Corporation. They would like you to recommend positions where France's goal keeper should kick the ball so that the French team's players can then hit it with their head. 
 
-<img src="Regularization\images\field_kiank.png" style="width:600px;height:350px;">
+<img src="images\field_kiank.png" style="width:600px;height:350px;">
 
 <caption><center><font color='purple'><b>Figure 1</b>: Football field. The goal keeper kicks the ball in the air, the players of each team are fighting to hit the ball with their head </font></center></caption>
 
@@ -75,7 +75,7 @@ To understand drop-out, consider this conversation with a friend:
 
 
 <center>
-<video width="620" height="440" src="Regularization\images\dropout1_kiank.mp4" type="video/mp4" controls>
+<video width="620" height="440" src="images\dropout1_kiank.mp4" type="video/mp4" controls>
 </video>
 </center>
 <br>
