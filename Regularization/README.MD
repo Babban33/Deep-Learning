@@ -103,6 +103,7 @@ When you shut some neurons down, you actually modify your model. The idea behind
 - During training time, divide each dropout layer by keep_prob to keep the same expected value for the activations. For example, if keep_prob is 0.5, then we will on average shut down half the nodes, so the output will be scaled by 0.5 since only the remaining half are contributing to the solution. Dividing by 0.5 is equivalent to multiplying by 2. Hence, the output now has the same expected value. You can check that this works even when keep_prob is other values than 0.5.  
 </font>
 ---
+
 # **Conclusion**
 **Here are the results of our three models**: 
 
