@@ -1,4 +1,5 @@
 # **Gradient Checking**
+Used to check Gradient propose to global minima.
 <a name='2'></a>
 ## Problem Statement
 
