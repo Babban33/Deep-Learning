@@ -185,4 +185,19 @@ $$ X = \begin{bmatrix}
 1 && 0
 \end{bmatrix}\tag{4}$$
 
-As you can see, this function creates a "mask" matrix which keeps track of where the maximum of the matrix is. True (1) indicates the position of the maximum in X, the other entries are False (0). You'll see later that the backward pass for average pooling is similar to this, but uses a different mask.  
+As you can see, this function creates a "mask" matrix which keeps track of where the maximum of the matrix is. True (1) indicates the position of the maximum in X, the other entries are False (0). You'll see later that the backward pass for average pooling is similar to this, but uses a different mask. 
+
+Why keep track of the position of the max? It's because this is the input value that ultimately influenced the output, and therefore the cost. Backprop is computing gradients with respect to the cost, so anything that influences the ultimate cost should have a non-zero gradient. So, backprop will "propagate" the gradient back to this particular input value that had influenced the cost. 
+
+<a name='5-2-2'></a>
+### 5.2.2 - Average Pooling - Backward Pass 
+
+In max pooling, for each input window, all the "influence" on the output came from a single input value--the max. In average pooling, every element of the input window has equal influence on the output. So to implement backprop, you will now implement a helper function that reflects this.
+
+For example if we did average pooling in the forward pass using a 2x2 filter, then the mask you'll use for the backward pass will look like: 
+$$ dZ = 1 \quad \rightarrow  \quad dZ =\begin{bmatrix}
+1/4 && 1/4 \\
+1/4 && 1/4
+\end{bmatrix}\tag{5}$$
+
+This implies that each position in the $dZ$ matrix contributes equally to output because in the forward pass, we took an average. 
